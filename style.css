@@ -1,0 +1,768 @@
+body{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html{
+  scroll-behavior: smooth;
+}
+h1{
+  font-family: Oswald;
+}
+
+.header{
+  width: 100%;
+  padding: 0px 14% 0px 14%;
+  z-index: 1111111111111111111111;
+}
+
+
+
+.menu{
+  display: flex;
+}
+
+.main-hero-secton{
+  background-image: url(./image/coffee_bg.jpg) !important;
+  background-position: 0 0;
+  background-position: top;
+  height: 100%;
+  background-size: cover;
+  background-attachment: fixed;
+  position: relative;
+  top: 0;
+  left: 0;
+  z-index: 1;
+}
+
+
+
+.smoke-shadow{
+  position: absolute;
+  top: -55%;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.cup_lear{
+  position: absolute;
+  bottom: 4rem;
+  left: 20rem;
+  z-index: 1;
+}
+
+.smoke,
+.smoke2,
+.smoke3{
+  filter: blur(5px);
+  transform-origin: 50% 50%;
+}
+
+.smoke{
+  animation: smoke1 3s linear infinite;
+  animation-delay: 0.5s;
+}
+
+.smoke2{
+  animation: smoke2 3s linear infinite;
+  animation-delay: 1.5s;
+}
+.smoke3{
+  width: 300px;
+  animation: smoke3 4s linear infinite;
+  animation-delay: 2.5s;
+}
+
+@keyframes smoke1 {
+  0%{
+    filter: blur(0px);
+    transform: translateY(0px) scale(-1, 1);
+    opacity: 0;
+  }
+  25%{
+    filter: blur(3px);
+    transform: translateY(-10px) scale(-1, 1.05);
+    opacity: 0.5;
+  }
+  50%{
+    filter: blur(5px);
+    transform: translateY(-20 px) scale(-1, 1.1);
+    opacity: 1;
+  }
+  75%{
+    filter: blur(5px);
+    transform: translateY(-30px) scale(-1, 1.15);
+    opacity: 0.5;
+  }
+  100%{
+    filter: blur(7px);
+    transform: translateY(-40px) scale(-1, 1.2);
+    opacity: 0;
+  }
+}
+
+@keyframes smoke2 {
+  0%{
+    filter: blur(0px);
+    transform: translateY(0px) scale(1);
+    opacity: 0;
+  }
+  25%{
+    filter: blur(3px);
+    transform: translateY(-10px) scale(1.05);
+    opacity: 0.5;
+  }
+  50%{
+    filter: blur(5px);
+    transform: translateY(-20 px) scale(1.1);
+    opacity: 1;
+  }
+  75%{
+    filter: blur(5px);
+    transform: translateY(-30px) scale(1.15);
+    opacity: 0.5;
+  }
+  100%{
+    filter: blur(7px);
+    transform: translateY(-40px) scale(1.2);
+    opacity: 0;
+  }
+}
+
+@keyframes smoke3 {
+  0%{
+    filter: blur(0px);
+    transform: translateY(0px) scale(1);
+    opacity: 0;
+  }
+  25%{
+    filter: blur(3px);
+    transform: translateY(-20px) scale(1.05);
+    opacity: 0.5;
+  }
+  50%{
+    filter: blur(5px);
+    transform: translateY(-40 px) scale(1.1);
+    opacity: 1;
+  }
+  75%{
+    filter: blur(5px);
+    transform: translateY(-60px) scale(1.15);
+    opacity: 0.5;
+  }
+  100%{
+    filter: blur(7px);
+    transform: translateY(-80px) scale(1.2);
+    opacity: 0;
+  }
+}
+
+
+.hero-content{
+  padding-bottom: 26rem;
+}
+
+.sticky{
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+
+
+
+.menu ul{
+  list-style: none;
+  cursor: pointer;
+}
+
+.menu ul li a{
+  margin-right: 2rem;
+  font-size: 23px;
+  font-weight: 600;
+  font-family: Oswald;
+  color: #e7a261;
+  text-decoration: none;
+}
+
+.m-style{
+  position: relative;
+  display: inline;
+  overflow: hidden;
+}
+
+.m-style::after{
+  content: '';
+  position: absolute;
+  width: 100%;
+  transform: scaleX(0);
+  height: 3px;
+  bottom: 0;
+  left: 0;
+  background-color: #e7a261;
+  transform-origin: bottom right;
+  transition: transform 0.35s ease-out;
+}
+
+.m-style:hover:after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}
+
+
+
+.logo img{
+  width: 100px;
+  height: 100px;
+  cursor: pointer;
+}
+
+.heading{
+  padding: 10rem 0 2rem 0;
+  font-size: 90px;
+}
+.hero-content p{
+  font-size: 25px;
+}
+
+.button{
+  text-align: center;
+  position: absolute;
+  bottom: 15rem;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.our-offer{
+  font-family: Oswald;
+  color: #e7a261;
+  line-height: 60px;
+  letter-spacing: 3px;
+  font-size: 20px;
+  border-color: #e7a261;
+  border-style: solid;
+  border-width: 1px;
+  padding-left: 60px;
+  border-radius: 30px;
+  padding-right: 60px;
+  background-color: rgba(0, 0, 0, 0);
+}
+.our-offer:hover{
+  color: black;
+  background-color: #e7a261;
+  transition: .2s
+}
+
+.bottom-banar{
+  position: absolute;
+  bottom: 0;
+  z-index: -1;
+}
+
+.slide-up{
+  animation: slide-up 0.9s cubic-bezier(0.65, 0, 0.35, 1)
+}
+  
+@keyframes slide-up {
+
+  0%
+    {transform: translateY(100px);
+    opacity: .2;}
+  100%
+    {transform: translateY(0);
+    opacity: 1;}
+}
+
+
+.menu-card{
+  padding-top: 15rem;
+}
+
+.philo-up-line{
+  z-index: 3;
+  background-color: rgb(230, 176, 141);
+  display: inline-block;
+  color: rgb(255, 255, 255);
+  width: 80px;
+  height: 3px;
+  min-height: 0px;
+  min-width: 0px;
+  transform-origin: 50% 50%;
+  opacity: 1;
+  transform: translate(0px, 0px);
+  visibility: visible;
+}
+
+.philosophy h1{
+  font-family: Oswald;
+  font-weight: 300;
+  font-size: 50px;
+  margin-bottom: 50px;
+  margin-top: 10px;
+}
+
+.philosophy p{
+  font-family: Roboto;
+  font-weight: 300;
+  font-size: 25px;
+  margin-bottom: 3rem;
+}
+
+.philosophy{
+  width: 100%;
+  margin: auto;
+}
+
+.hidden{
+  opacity: 0;
+  filter: blur(5px);
+  transform: translate(-100%);
+  transition: all 1s;
+}
+
+.tast{
+  opacity: 0;
+  filter: blur(5px);
+  transform: translate(100%);
+  transition: all 1s;
+}
+
+.show {
+  opacity: 1;
+  filter: blur(0);
+  transform: translateX(0);
+}
+
+.about-coffee{
+  position: relative;
+  width: 70%;
+  margin: auto;
+}
+
+.coffee_pic1{
+  width: 380px;
+  height: 380px;
+  border-radius: 200px;
+  opacity: .9;
+}
+
+.hover{
+  width: 420px;
+}
+
+.bg-style{
+  cursor: pointer;
+}
+
+.position-relative:hover .hover{
+  transform: scale(1.1);
+  opacity: 1;
+  transition: transform 1s;
+}
+
+.coffee_leaf{
+  width: 75px;
+  height: 75px;
+}
+.coffee_leaf-content{
+  line-height: 50px;
+  letter-spacing: 0px;
+  font-weight: 400;
+  font-size: 40px;
+  color: #fff;
+}
+
+.our-menu p{
+  font-family: Roboto;
+  font-weight: 300;
+  font-size: 25px;
+  margin-bottom: 3rem;
+  margin-top: 3rem;
+}
+
+.product-pricing{
+  flex-direction: row;
+  justify-content: center;
+}
+
+.product-pricing-coffee{
+  /* margin: 0 1rem; */
+  /* width: 20rem; */
+  width: 20%;
+  padding: 20px;
+}
+.product-pricing-wrap{
+  width: 65%;
+  overflow: hidden;
+  margin: auto;
+}
+
+.product-pricing-coffee .icon_coffee img{
+  width: 100px;
+  height: 100px;
+}
+.product-pricing-coffee .icon_coffee h1{
+  font-weight: 300;
+  font-size: 30px;
+  margin: 1rem 0px 5rem 0;
+}
+
+.product-pricing-contant p{
+  font-size: 20px;
+}
+
+.slideup{
+  opacity: 0;
+  filter: blur(5px);
+  transform: translateY(100%);
+  transition: all 1s;
+}
+.Dshow {
+  opacity: 1;
+  filter: blur(0);
+  transform: translateY(0);
+}
+
+.Croissants img{
+  width: 100%;
+  height: 100%;
+}
+
+.Croissants{
+  background-image: url(./image/cafe_bg2.jpg);
+}
+
+.Croissants_contant{
+  position: absolute;
+  bottom: 24rem;
+  left: 50%;
+  transform: translateX(-7%);
+}
+
+.Croissants_contant h1{
+  font-weight: 300;
+  color: #fff;
+  font-size: 80px;
+}
+.Croissants_contant p{
+  font-weight: 400;
+  color: #fff;
+  font-size: 23px;
+  padding-top: 35px;
+}
+.overlay-content{
+  top: 24%;
+  left: 19%;
+}
+
+.cafe_croissant{
+  width: 100%;
+  position: absolute;
+  top: 550px;
+  right: -650px;
+  text-align: end;
+}
+
+.CroissantSide{
+  transform: translateX(0);
+  transition: 1s ease-in-out;
+}
+
+.lay{
+  transform: translateX(-1000px);
+  transition: .5s;
+  transition-duration: 0.5s;
+  transition-timing-function: cubic-bezier(0.73, 0.55, 0.09, 1.3);
+  transition-delay: .5s;
+  transition-property: all;
+  opacity: 1;
+
+}
+
+.cafe_croissant img{
+  width: 700px;
+  height: 383px;
+}
+
+.overlay-content h1{
+  font-weight: 300;
+  color: #fff;
+  font-size: 80px;
+}
+.overlay-content p{
+  font-weight: 400;
+  color: #fff;
+  font-size: 23px;
+  padding-top: 35px;
+}
+
+.Location img{
+  width: 100px;
+  height: 100px;
+}
+.times img{
+  width: 100px;
+  height: 100px;
+}
+.contact img{
+  width: 100px;
+  height: 100px;
+}
+
+.coffee-shop-image{
+  background-image: url(./image/cafe_bg3.jpg);
+  width: 100%;
+  height: 100%;
+  background-attachment: fixed;
+  overflow: hidden;
+}
+
+.coffee-shop-contant img{
+  width: 100px;
+  height: 100px;
+}
+.logo-with img{
+  width: 100px;
+  height: 100px;
+}
+
+.coffee-shop-contant{
+  padding: 17rem 0 14rem 0;
+  width: 26%;
+  margin: auto;
+}
+
+.icon-wrap{
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+}
+@media only screen and (max-width: 1600px) {
+
+  .cafe_croissant{
+    right: -850px;
+  }
+
+}
+
+@media only screen and (max-width: 1400px){
+  .cup_lear{
+    left: 10rem;
+    bottom: 2rem;
+  }
+  .product-pricing-wrap{
+    width: 80%;
+  }
+  .overlay-content h1{
+    font-size: 55px;
+  }
+  .Croissants_contant h1{
+    font-size: 55px;
+  }
+  .overlay-content p{
+    font-size: 18px;
+  }
+  .Croissants_contant p{
+    font-size: 18px;
+  }
+  .cafe_croissant img{
+    width: 600px;
+    height: 340px;
+  }
+  .cafe_croissant{
+    top: 440px;
+  }
+}
+
+@media only screen and (max-width: 1200px) {
+  .header{
+    padding: 0 8% 0 8% ;
+  }
+  .hero-content .heading{
+    font-size: 70px;
+  }
+  .hero-content p {
+    font-size: 20px;
+  }
+  .cup_lear{
+    left: 5rem;
+    bottom: 0rem;
+  }
+  .our-offer{
+    font-size: 15px;
+  }
+  .product-pricing-wrap{
+    width: 90%;
+  }
+  .menu ul li{
+    font-size: 20px;
+  }
+  .logo img {
+    width: 90px;
+    height: 90px;
+  }
+  .cafe_croissant{
+    top: 370px;
+  }
+  .cafe_croissant img{
+    width: 500px;
+    height: 290px;
+  }
+  .Croissants_contant{
+    bottom: 15rem;
+  }
+}
+@media only screen and (max-width: 1000px) {
+  .cafe_croissant{
+    right: -970px;
+  }
+  .overlay-content{
+    left: 8rem;
+  }
+  .overlay-content h1{
+    font-size: 40px;
+  }
+  .Croissants_contant h1{
+    font-size: 40px;
+  }
+  .overlay-content p{
+    font-size: 16px;
+  }
+  .Croissants_contant p{
+    font-size: 16px;
+  }
+  .cafe_croissant img{
+    width: 450px;
+    height: 270px;
+  }
+  .cafe_croissant{
+    top: 260px;
+  }
+  .Location img {
+    width: 200px;
+    height: 200px;
+  }
+  .Location h1{
+    font-size: 60px;
+  }
+  .times img {
+    width: 200px;
+    height: 200px;
+  }
+  .times h1{
+    font-size: 60px;
+  }
+  .contact img {
+    width: 200px;
+    height: 200px;
+  }
+  .contact h1{
+    font-size: 60px;
+  }
+}
+@media only screen and (max-width: 800px) {
+  .header{
+    padding: 0 4% 0 4% ;
+  }
+  .hero-content .heading{
+    font-size: 50px;
+  }
+  .hero-content p {
+    font-size: 14px;
+  }
+  .menu-btn{
+    display: none;
+  }
+  .about-responsive{
+    display: inline !important;
+  }
+  .about-coffee-tow{
+    padding-bottom: 2rem;
+  }
+  .menu-card{
+    padding-top: 8rem;
+  }
+  .philosophy h1{
+    font-size: 40px;
+    margin-bottom: 30px;
+  }
+  .philosophy p{
+    font-size: 16px;
+  }
+  .our-menu p{
+    font-size: 20px;
+  }
+  .hero-content {
+    padding-bottom: 30rem;
+  }
+  .button {
+    bottom: 25rem;
+  }
+  .logo img {
+    width: 80px;
+    height: 80px;
+  }
+  .menu ul li{
+    font-size: 18px;
+  }
+  .cup-image img{
+    width: 80%;
+    height: 80%;
+  }
+  .smoke-shadow{
+    left: 40%;
+    top: -48%;
+  }
+  .smoke{
+    width: 80% !important;
+  }
+  .smoke2{
+    width: 80% !important;
+  }
+  .smoke3{
+    width: 250px !important;
+  }
+  .cafe_croissant img{
+    width: 400px;
+    height: 240px;
+  }
+  .Croissants_contant {
+    bottom: 10rem;
+  }
+  .overlay-content{
+    left: 4rem;
+  }
+  .cafe_croissant{
+    top: 220px;
+  }
+  .coffee-shop-contant{
+    width: 60%;
+  }
+
+}
+.about-responsive{
+  display: flex;
+  justify-content: center;
+}
+
+@media screen and (max-width: 600px) {
+
+  .header{
+    padding: 0 2% 0 2%;
+  }
+  .our-menu p{
+    font-size: 18px;
+  }
+  .logo img {
+    width: 60px;
+    height: 60px;
+  }
+  .menu ul li{
+    font-size: 16px;
+  }
+  .our-offer{
+    line-height: 50px;
+    padding: 0 30px 0 30px;
+    font-size: 13px;
+  }
+}
