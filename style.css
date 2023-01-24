@@ -771,4 +771,11 @@ h1{
     padding: 0 30px 0 30px;
     font-size: 13px;
   }
+  .cafe_croissant img{
+    width: 300px;
+    height: 185px;
+  }
+  .cafe_croissant {
+    top: 160px;
+  }
 }
