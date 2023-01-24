@@ -664,6 +664,9 @@ h1{
   .header{
     padding: 0 4% 0 4% ;
   }
+  .menu ul li a{
+    font-size: 20px;
+  }
   .hero-content .heading{
     font-size: 50px;
   }
@@ -749,6 +752,9 @@ h1{
 
   .header{
     padding: 0 2% 0 2%;
+  }
+  .menu ul li a{
+    font-size: 18px;
   }
   .our-menu p{
     font-size: 18px;
